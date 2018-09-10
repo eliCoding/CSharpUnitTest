@@ -9,44 +9,60 @@ namespace TestNinja.Mocking
 {
     public class VideoService
     {
+        //Dipendency Inejction via Properties
+        private IFileReader _fileReader;
+
        
-        public string ReadVideoTitle(IFileReader fileReader)
+
+        //Dipendency Inejction via Properties
+        //public VideoService()  
+
+        //DI via Constructor parameter
+        public VideoService(IFileReader fileReader = null )
         {
-            var str = fileReader.Read("video.txt");
-            var video = JsonConvert.DeserializeObject<Video>(str);
+            _fileReader = fileReader ?? new FileReader();
+        }
+
+        // DI via method parameters
+        //public string ReadVideoTitle(IFileReader fileReader) {}
+
+        public string ReadVideoTitle()
+        {
+            var str = _fileReader.Read("video.txt");
+        var video = JsonConvert.DeserializeObject<Video>(str);
             if (video == null)
                 return "Error parsing the video.";
             return video.Title;
         }
 
-        public string GetUnprocessedVideosAsCsv()
-        {
-            var videoIds = new List<int>();
-            
-            using (var context = new VideoContext())
-            {
-                var videos = 
-                    (from video in context.Videos
-                    where !video.IsProcessed
-                    select video).ToList();
-                
-                foreach (var v in videos)
-                    videoIds.Add(v.Id);
+    public string GetUnprocessedVideosAsCsv()
+    {
+        var videoIds = new List<int>();
 
-                return String.Join(",", videoIds);
-            }
+        using (var context = new VideoContext())
+        {
+            var videos =
+                (from video in context.Videos
+                 where !video.IsProcessed
+                 select video).ToList();
+
+            foreach (var v in videos)
+                videoIds.Add(v.Id);
+
+            return String.Join(",", videoIds);
         }
     }
+}
 
-    public class Video
-    {
-        public int Id { get; set; }
-        public string Title { get; set; }
-        public bool IsProcessed { get; set; }
-    }
+public class Video
+{
+    public int Id { get; set; }
+    public string Title { get; set; }
+    public bool IsProcessed { get; set; }
+}
 
-    public class VideoContext : DbContext
-    {
-        public DbSet<Video> Videos { get; set; }
-    }
+public class VideoContext : DbContext
+{
+    public DbSet<Video> Videos { get; set; }
+}
 }
