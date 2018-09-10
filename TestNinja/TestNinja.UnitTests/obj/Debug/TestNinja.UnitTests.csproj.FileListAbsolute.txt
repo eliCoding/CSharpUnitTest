@@ -26,3 +26,12 @@ C:\Enliven\GitHub\CSharpUnitTest\TestNinja\TestNinja.UnitTests\bin\Debug\nunit.e
 C:\Enliven\GitHub\CSharpUnitTest\TestNinja\TestNinja.UnitTests\bin\Debug\Mono.Cecil.dll
 C:\Enliven\GitHub\CSharpUnitTest\TestNinja\TestNinja.UnitTests\bin\Debug\nunit.framework.dll
 C:\Enliven\GitHub\CSharpUnitTest\TestNinja\TestNinja.UnitTests\bin\Debug\nunit.framework.xml
+C:\Enliven\GitHub\CSharpUnitTest\TestNinja\TestNinja.UnitTests\bin\Debug\Castle.Core.dll
+C:\Enliven\GitHub\CSharpUnitTest\TestNinja\TestNinja.UnitTests\bin\Debug\Moq.dll
+C:\Enliven\GitHub\CSharpUnitTest\TestNinja\TestNinja.UnitTests\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Enliven\GitHub\CSharpUnitTest\TestNinja\TestNinja.UnitTests\bin\Debug\System.ValueTuple.dll
+C:\Enliven\GitHub\CSharpUnitTest\TestNinja\TestNinja.UnitTests\bin\Debug\Castle.Core.xml
+C:\Enliven\GitHub\CSharpUnitTest\TestNinja\TestNinja.UnitTests\bin\Debug\Moq.pdb
+C:\Enliven\GitHub\CSharpUnitTest\TestNinja\TestNinja.UnitTests\bin\Debug\Moq.xml
+C:\Enliven\GitHub\CSharpUnitTest\TestNinja\TestNinja.UnitTests\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Enliven\GitHub\CSharpUnitTest\TestNinja\TestNinja.UnitTests\bin\Debug\System.ValueTuple.xml
