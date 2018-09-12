@@ -10,7 +10,7 @@ namespace TestNinja.Mocking
         {
             if (booking.Status == "Cancelled")
                 return string.Empty;
-
+            //else 
             var unitOfWork = new UnitOfWork();
             var bookings =
                 unitOfWork.Query<Booking>()
